@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.user-state i { font-size:1rem; }
+
+nav.navbar {
+  background-color: cornflowerblue;
+}
+
+.tituloOpera {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tituloOpera button {
+  border: 0;
+  background-color: transparent;
+}
+.tituloOpera button i { font-size: 2rem; color: #666; }
+
+.content-group {
+  padding:40px;
+  background-color: gainsboro;
+  border-radius: 10px
+} 
+.card { 
+  position:relative; 
+  border-radius: 10px;
+}
+.card::before  {
+  content:'';
+  position: absolute;
+  top:0px;
+  left:0px;
+  border-top:3px solid red;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 0%;
+  height: 2px;
+}
+.card-10:before {
+  width: 10%;
+}
+.card-20:before {
+  width: 20%;
+}
+.card-pagada:before {
+  width: 100%;
+  border-color:green;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-corner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+i {
+  font-size: 1.4rem;
+}
