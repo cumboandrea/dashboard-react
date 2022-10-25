@@ -56,7 +56,7 @@ import { ObjectoContext } from '../context/ObjectProvider'
                     </li>
                   )
                 }
-                { "login: " + user }
+                {/* { "login: " + user } */}
               </ul>
               <form className="d-flex" role="search">
                 

@@ -14,7 +14,7 @@ const Login = () => {
         try {
             await loginUser(email, password)
             alert("Login Ok")
-            setUser(true)
+            //setUser(true)
         } catch (error) {
             console.log(error.code);
             alert('Error Code: ' + error.code)
