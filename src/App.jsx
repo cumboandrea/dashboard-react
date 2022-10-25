@@ -7,6 +7,7 @@ import Clientes from './routes/Clientes';
 import DetalleFactura from './routes/DetalleFactura';
 import Navbar from './components/Navbar'
 import { Register } from './components/Register';
+import Login from './components/Login';
 import ObjectProvider from './context/ObjectProvider'
 
 
@@ -30,6 +31,8 @@ function App() {
           <Route path="/factura/:id" element={ <DetalleFactura />} />
 
           <Route path="/register" element={ <Register /> } />
+
+          <Route path="/login" element={ <Login /> } />
         </Routes>
         
       </Router>

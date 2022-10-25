@@ -1,12 +1,12 @@
 import { createContext, useState, useEffect } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 
 export const ObjectoContext = createContext()
 
 const ObjectProvider = ( props ) => {
 
-    const [user, setUser] = useState(false)
+    const [user, setUser] = useState()
     const [facturas, setFacturas] = useState([])
 
     const todasFacturas = [
@@ -24,10 +24,12 @@ const ObjectProvider = ( props ) => {
     }, []) 
 
 
-    const registerUser = (email, password) => createUserWithEmailAndPassword(auth, email, password)
+    const registerUser = (email, password) => createUserWithEmailAndPassword(auth, email, password);
+
+    const loginUser = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
     return (
-        <ObjectoContext.Provider value = {{ user, setUser, facturas, setFacturas, registerUser }}>
+        <ObjectoContext.Provider value = {{ user, setUser, facturas, setFacturas, registerUser, loginUser }}>
             {props.children}
         </ObjectoContext.Provider>
     )
